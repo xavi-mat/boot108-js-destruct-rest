@@ -78,9 +78,8 @@ console.log("combineTwoArrays:", combineTwoArrays([1, 2, 3], ['a', 'b', 'c']));
 
 
 
-
 ////////////////////////////////////////////////////////////////////////////////
-//
+// 3. Extras
 console.log("\n///////////////////////////////\n3. Extras");
 
 // Dado el siguiente objeto:
