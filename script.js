@@ -111,17 +111,19 @@ console.log("onlyUniques(1, 1, 2, 2, 3, 6, 7, 8):", onlyUniques(1, 1, 2, 2, 3, 6
 
 // Escriba una función llamada combineAllArrays que pueda recibir cualquier cantidad de arrays como argumentos y los combine todos en un solo array.
 
-// const combineAllArrays = (...arrs) => [...arrs.map(arr=>arr.map(el=>el))];
-// const combineAllArrays = (...arrs) => [arrs.map((...arr)=>))];
-const combineAllArrays = (...arrs) => {
-    let combined = [];
-    arrs.forEach(arr=>{
-        arr.forEach(elem=>{
-            combined.push(elem)
-        })
-    });
-    return combined;
-};
+// const combineAllArraysVersion1 = (...arrs) => {
+//     let combined = [];
+//     arrs.forEach(arr=>{
+//         arr.forEach(elem=>{
+//             combined.push(elem);
+//         })
+//     });
+//     return combined;
+// };
+
+// const combineAllArraysVersion2OnlyStrings = (...arrs) => arrs.toString().split(',');
+
+const combineAllArrays = (arr1, ...arrs) => arr1.concat(...arrs);
 
 console.log("combineAllArrays([3, 6, 7, 8],[2, 7, 3, 1]):", combineAllArrays([3, 6, 7, 8], [2, 7, 3, 1]));
 // [3, 6, 7, 8, 2, 7, 3, 1]
