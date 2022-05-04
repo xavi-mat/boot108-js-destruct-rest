@@ -122,8 +122,11 @@ console.log("onlyUniques(1, 1, 2, 2, 3, 6, 7, 8):", onlyUniques(1, 1, 2, 2, 3, 6
 
 // const combineAllArraysVersion2OnlyStrings = (...arrs) => arrs.toString().split(',');
 
-const combineAllArrays = (arr1, ...arrs) => arr1.concat(...arrs);
+// const combineAllArrays = (arr1, ...arrs) => arr1.concat(...arrs);
+const combineAllArrays = (...arrs) => [].concat(...arrs);
+// const combineAllArraysEmpty = (arr1=[], ...arrs) => arr1.concat(...arrs);
 
+console.log("combineAllArrays():", combineAllArrays());
 console.log("combineAllArrays([3, 6, 7, 8],[2, 7, 3, 1]):", combineAllArrays([3, 6, 7, 8], [2, 7, 3, 1]));
 // [3, 6, 7, 8, 2, 7, 3, 1]
 console.log(
@@ -132,6 +135,10 @@ console.log(
 );
 // [2, 7, 3, 1, 2, 7, 4, 12, 2, 44, 22, 7, 3, 1]
 
+
+// Ger's solution:
+const combineAllArraysGerVersion = (...combinados) =>
+    combinados.reduce((a, b) => [...a, ...b]);
 
 // Escriba una función llamada sumAndSquare que reciba cualquier número de argumentos, los eleve al cuadrado y devuelva la suma de todos los valores cuadrados.
 
