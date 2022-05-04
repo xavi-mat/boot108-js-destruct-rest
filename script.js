@@ -140,6 +140,9 @@ console.log(
 const combineAllArraysGerVersion = (...combinados) =>
     combinados.reduce((a, b) => [...a, ...b]);
 
+// Fran's solution:
+const combineAllArraysFranVersion = (...arrays) => arrays.flat();
+
 // Escriba una función llamada sumAndSquare que reciba cualquier número de argumentos, los eleve al cuadrado y devuelva la suma de todos los valores cuadrados.
 
 const sumAndSquare = (...nums) => nums.reduce((prev, curr) => prev + curr ** 2);
